@@ -63,7 +63,7 @@ namespace CurrencyConverter
             while (true)
             {
                 WriteColoredString(ConsoleColor.Yellow, $"[{currencyFrom} --> {currencyTo}] : ");
-                string[] args = Console.ReadLine().Split(' ');
+                string[] args = Console.ReadLine().TrimEnd(' ').Split(' ');
 
                 double input = 0.0;
                 bool isNum = double.TryParse(args[0], out input);
